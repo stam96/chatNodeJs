@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors"
 import { createServer } from "http";
 import {Server as ServidorIo} from "socket.io";
 import cookieParser from "cookie-parser"
@@ -21,6 +22,7 @@ export class Server {
     this.sockets();
   }
   middleware() {
+    this.app.use(cors())
     this.app.use(express.json());
     this.app.use(express.static("public"))
     this.app.use(cookieParser());
