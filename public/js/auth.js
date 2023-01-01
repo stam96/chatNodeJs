@@ -1,6 +1,6 @@
 const logout = document.getElementById("google_signout");
 logout.addEventListener("click", async () => {
-  const res = await fetch("http://localhost:3000/api/v1/logout", {
+  const res = await fetch("https://chatnodejs-production-3e03.up.railway.app/api/v1/logout", {
     method: "Get",
   });
   console.log(res.ok, res.status);
@@ -16,7 +16,7 @@ function handleCredentialResponse(response) {
   //Google token
   //console.log("token : " + response.credential)
   const body = { id_token: response.credential };
-  fetch("http://localhost:3000/api/v1/google", {
+  fetch("https://chatnodejs-production-3e03.up.railway.app/api/v1/google", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -43,7 +43,7 @@ miFormulario.addEventListener("submit", (e) => {
       formData[el.name] = el.value;
     }
   }
-  fetch("http://localhost:3000/api/v1/login", {
+  fetch("https://chatnodejs-production-3e03.up.railway.app/api/v1/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

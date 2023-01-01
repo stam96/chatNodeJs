@@ -26,7 +26,7 @@ const validarJwt = async()=>{
 
     //console.log(token)
 
-    const resp = await fetch("http://localhost:3000/api/v1/auth", {
+    const resp = await fetch("https://chatnodejs-production-3e03.up.railway.app/api/v1/auth", {
         method:"GET",
         headers:{
             'Accept': 'application/json',

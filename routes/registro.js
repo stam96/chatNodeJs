@@ -23,7 +23,7 @@ router.post(
   registroUsuario
 );
 router.post(
-  "/registro/:token",
+  "",
   verifacarTokenEmail,
   validationResultExpress,
   verificarCorreoUsuario
